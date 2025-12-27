@@ -19,8 +19,11 @@ export default function About() {
         setPage((prev) => (prev < totalPages - 1 ? prev + 1 : 0));
     };
 
-    // Generate 8 placeholders
-    const allSponsors = Array.from({ length: 8 }, (_, i) => i + 1);
+    // Sponsors data
+    const allSponsors = [
+        { id: 1, img: '/Images/logo_1.jpg', alt: 'Partner 1' },
+        ...Array.from({ length: 7 }, (_, i) => ({ id: i + 2, img: null, alt: `Partner ${i + 2}` }))
+    ];
     const visibleSponsors = allSponsors.slice(page * itemsPerPage, (page + 1) * itemsPerPage);
 
     return (
@@ -81,20 +84,33 @@ export default function About() {
                                 alignItems: 'center',
                                 justifyItems: 'center'
                             }}>
-                                {visibleSponsors.map((i) => (
-                                    <div key={i} style={{
+                                {visibleSponsors.map((sponsor) => (
+                                    <div key={sponsor.id} style={{
                                         width: '100%',
                                         height: '100px',
-                                        backgroundColor: 'rgba(0,0,0,0.05)',
-                                        border: '1px dashed var(--border)',
+                                        backgroundColor: sponsor.img ? 'transparent' : 'rgba(0,0,0,0.05)',
+                                        border: sponsor.img ? 'none' : '1px dashed var(--border)',
                                         display: 'flex',
                                         alignItems: 'center',
                                         justifyContent: 'center',
                                         borderRadius: '0.5rem',
                                         color: 'var(--text-light)',
-                                        transition: 'all 0.3s ease'
+                                        transition: 'all 0.3s ease',
+                                        overflow: 'hidden'
                                     }}>
-                                        Logo {i}
+                                        {sponsor.img ? (
+                                            <img
+                                                src={sponsor.img}
+                                                alt={sponsor.alt}
+                                                style={{
+                                                    maxWidth: '100%',
+                                                    maxHeight: '100%',
+                                                    objectFit: 'contain'
+                                                }}
+                                            />
+                                        ) : (
+                                            `Logo ${sponsor.id}`
+                                        )}
                                     </div>
                                 ))}
                             </div>
