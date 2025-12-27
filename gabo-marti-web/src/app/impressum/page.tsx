@@ -30,7 +30,7 @@ export default function ImpressumPage() {
 
                         <div style={{ marginTop: '2rem' }}>
                             <h3 style={{ marginBottom: '0.5rem' }}>Bildwelt</h3>
-                            <p>Die Bildwelt wurde von <strong>Daniel Wechsler Photography, Sursee</strong> erstellt.</p>
+                            <p>Die Bildwelt wurde von <strong><a href="https://www.danielwechsler.ch/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>Daniel Wechsler Photography, Sursee</a></strong> erstellt.</p>
                         </div>
 
                         <hr style={{ margin: '3rem 0', borderColor: 'var(--border)' }} />

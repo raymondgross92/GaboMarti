@@ -52,13 +52,21 @@ export default function Contact() {
                             <div className={styles.infoBox}>
                                 <h3 className={styles.infoTitle}>Anschrift</h3>
                                 <p className={styles.text}>
-                                    Gabo Marti GmbH<br />
-                                    Sonnmattstrasse 1<br />
-                                    6206 Neuenkirch
+                                    <a
+                                        href="https://www.google.com/maps/search/?api=1&query=Sonnmattstrasse+1+6206+Neuenkirch"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s' }}
+                                        className="hover:text-primary"
+                                    >
+                                        Gabo Marti GmbH<br />
+                                        Sonnmattstrasse 1<br />
+                                        6206 Neuenkirch
+                                    </a>
                                 </p>
                                 <p className={styles.text} style={{ marginTop: '1rem' }}>
-                                    Tel: +41 41 467 10 46<br />
-                                    Email: info@gabomarti.ch
+                                    Tel: <a href="tel:+41414671046" style={{ color: 'inherit', textDecoration: 'none' }} className="hover:text-primary">+41 41 467 10 46</a><br />
+                                    Email: <a href="mailto:info@gabomarti.ch" style={{ color: 'inherit', textDecoration: 'none' }} className="hover:text-primary">info@gabomarti.ch</a>
                                 </p>
                             </div>
 
