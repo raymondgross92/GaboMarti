@@ -8,7 +8,16 @@ import styles from '@/components/sections/Products.module.css';
 const PRODUCTS = [
     {
         title: 'Motoren',
-        text: 'Yamaha Aussenborder, Elektromotoren und Service für alle Marken.',
+        text: (
+            <>
+                <div style={{ marginBottom: '0.5rem' }}>
+                    <strong>YAMAHA</strong>
+                </div>
+                <div>
+                    Yamaha baut weltweit beliebte und hochgeschätzte Aussenborder. Die Gründe dafür sind einfach: Die Auswahl, die Leistung und der gute Ruf. In allen drei Bereichen sind sie aussergewöhnlich gut.
+                </div>
+            </>
+        ),
         color: '#134074',
         link: 'https://promot.ch/produkte-type/alle-produkte/marine-motoren/yamaha/'
     },
