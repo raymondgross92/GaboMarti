@@ -3,7 +3,7 @@
 import SectionHeading from '@/components/ui/SectionHeading';
 import ScrollAnimation from '@/components/ui/ScrollAnimation';
 import Button from '@/components/ui/Button';
-import styles from '@/components/sections/Products.module.css';
+import styles from './boats.module.css';
 
 const BOATS = [
     {
@@ -21,14 +21,14 @@ const BOATS = [
                 </div>
             </>
         ),
-        color: '#FFFFFF', // White background
+        color: '#FFFFFF', // White background (kept for potential fallback, though CSS enforces white)
         link: 'https://promot.ch/produkte-type/alle-produkte/boote/',
         image: '/Images/promot_logo.webp'
     },
     {
         title: 'Occasionen',
         text: 'Finden Sie alle unsere aktuellen Inserate direkt auf Boot24.',
-        color: '#FFFFFF', // White background
+        color: '#FFFFFF',
         link: 'https://www.boot24.ch/chde/haendler/1833/gabo-marti-gmbh/',
         image: '/Images/boot24_logo.png'
     }
@@ -36,7 +36,7 @@ const BOATS = [
 
 export default function BoatsPage() {
     return (
-        <div style={{ paddingTop: '80px' }}>
+        <div style={{ paddingTop: '80px', paddingBottom: '4rem', backgroundColor: 'var(--background)' }}>
             <section className={`section ${styles.section}`}>
                 <div className="container">
                     <ScrollAnimation>
@@ -51,54 +51,34 @@ export default function BoatsPage() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={styles.card}
-                                        style={{ textDecoration: 'none', display: 'block' }}
                                     >
-                                        <div
-                                            className={styles.cardImage}
-                                            style={{
-                                                backgroundColor: boat.color,
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                justifyContent: 'center',
-                                                padding: '2rem'
-                                            }}
-                                        >
+                                        <div className={styles.cardImage}>
                                             {boat.image && (
                                                 <img
                                                     src={boat.image}
                                                     alt={boat.title}
-                                                    style={{
-                                                        maxWidth: '80%',
-                                                        maxHeight: '80%',
-                                                        objectFit: 'contain'
-                                                    }}
                                                 />
                                             )}
                                         </div>
-                                        <div className={styles.overlay}>
+                                        <div className={styles.cardContent}>
                                             <h3 className={styles.cardTitle}>{boat.title}</h3>
                                             <div className={styles.cardText}>{boat.text}</div>
-                                            <div style={{ marginTop: 'auto' }}>
-                                                <Button variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
+                                            <div className={styles.buttonContainer}>
+                                                <Button variant="primary" fullWidth>
                                                     Zum Angebot
                                                 </Button>
                                             </div>
                                         </div>
                                     </a>
                                 ) : (
+                                    // Fallback or other cards if needed, though mostly unused now for boats
                                     <div key={index} className={styles.card}>
-                                        <div
-                                            className={styles.cardImage}
-                                            style={{ backgroundColor: boat.color }}
-                                        />
-                                        <div className={styles.overlay}>
+                                        <div className={styles.cardImage}>
+                                            {/* Fallback color if no image */}
+                                        </div>
+                                        <div className={styles.cardContent}>
                                             <h3 className={styles.cardTitle}>{boat.title}</h3>
                                             <p className={styles.cardText}>{boat.text}</p>
-                                            <div>
-                                                <Button variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
-                                                    Mehr erfahren
-                                                </Button>
-                                            </div>
                                         </div>
                                     </div>
                                 )
