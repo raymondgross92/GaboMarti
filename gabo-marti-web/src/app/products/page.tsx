@@ -9,17 +9,26 @@ const PRODUCTS = [
     {
         title: 'Motoren',
         text: 'Yamaha Aussenborder, Elektromotoren und Service für alle Marken.',
-        color: '#134074'
+        color: '#134074',
+        link: 'https://promot.ch/produkte-type/alle-produkte/marine-motoren/yamaha/'
+    },
+    {
+        title: 'Bootsanhänger',
+        text: 'Sichere und zuverlässige Bootsanhänger für jeden Bedarf.',
+        color: '#205EAC', // Slightly different blue
+        link: null
     },
     {
         title: 'Echolote & Navigation',
         text: 'Professionelle Echolote, Fishfinder und Navigationssysteme.',
-        color: '#8DA9C4'
+        color: '#8DA9C4',
+        link: null
     },
     {
         title: 'Zubehör',
         text: 'Sicherheitsausrüstung, Pflegeprodukte und technisches Zubehör.',
-        color: '#64748B' // Greyish
+        color: '#64748B', // Greyish
+        link: null
     }
 ];
 
@@ -33,21 +42,46 @@ export default function ProductsPage() {
 
                         <div className={styles.grid}>
                             {PRODUCTS.map((prod, index) => (
-                                <div key={index} className={styles.card}>
-                                    <div
-                                        className={styles.cardImage}
-                                        style={{ backgroundColor: prod.color }}
-                                    />
-                                    <div className={styles.overlay}>
-                                        <h3 className={styles.cardTitle}>{prod.title}</h3>
-                                        <p className={styles.cardText}>{prod.text}</p>
-                                        <div>
-                                            <Button variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
-                                                Anfragen
-                                            </Button>
+                                prod.link ? (
+                                    <a
+                                        key={index}
+                                        href={prod.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={styles.card}
+                                        style={{ textDecoration: 'none', display: 'block' }}
+                                    >
+                                        <div
+                                            className={styles.cardImage}
+                                            style={{ backgroundColor: prod.color }}
+                                        />
+                                        <div className={styles.overlay}>
+                                            <h3 className={styles.cardTitle}>{prod.title}</h3>
+                                            <p className={styles.cardText}>{prod.text}</p>
+                                            <div style={{ marginTop: 'auto' }}>
+                                                <Button variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
+                                                    Zum Angebot
+                                                </Button>
+                                            </div>
+                                        </div>
+                                    </a>
+                                ) : (
+                                    <div key={index} className={styles.card}>
+                                        <div
+                                            className={styles.cardImage}
+                                            style={{ backgroundColor: prod.color }}
+                                        />
+                                        <div className={styles.overlay}>
+                                            <h3 className={styles.cardTitle}>{prod.title}</h3>
+                                            <p className={styles.cardText}>{prod.text}</p>
+                                            <div style={{ marginTop: 'auto' }}>
+                                                <Button variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
+                                                    Anfragen
+                                                </Button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                )
                             ))}
                         </div>
                     </ScrollAnimation>

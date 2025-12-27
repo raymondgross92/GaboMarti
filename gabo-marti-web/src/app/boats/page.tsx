@@ -8,7 +8,19 @@ import styles from '@/components/sections/Products.module.css';
 const BOATS = [
     {
         title: 'Neuboote',
-        text: 'Entdecken Sie unsere aktuellen Neuboote. Wir beraten Sie gerne.',
+        text: (
+            <>
+                <div style={{ marginBottom: '1rem' }}>
+                    <strong>Buster-Boote</strong><br />
+                    Buster-Boote sind problemlose, haltbare, sichere und leicht zu pflegende Boote.<br />
+                    Sie sind stabil und unsinkbar.
+                </div>
+                <div>
+                    <strong>Thoma</strong><br />
+                    Fischerboote mit Biss. Die Baureihen Thoma 500 550 600 Classic und 600 650 Sportfischer sind für höchste Ansprüche ausgelegt.
+                </div>
+            </>
+        ),
         color: '#FFFFFF', // White background
         link: 'https://promot.ch/produkte-type/alle-produkte/boote/buster/',
         image: null // Will fallback to text "ProMot" in the rendering logic below
@@ -83,7 +95,7 @@ export default function BoatsPage() {
                                         </div>
                                         <div className={styles.overlay}>
                                             <h3 className={styles.cardTitle}>{boat.title}</h3>
-                                            <p className={styles.cardText}>{boat.text}</p>
+                                            <div className={styles.cardText}>{boat.text}</div>
                                             <div style={{ marginTop: 'auto' }}>
                                                 <Button variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
                                                     Zum Angebot
