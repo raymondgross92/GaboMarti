@@ -22,7 +22,7 @@ const BOATS = [
             </>
         ),
         color: '#FFFFFF', // White background
-        link: 'https://promot.ch/',
+        link: 'https://promot.ch/produkte-type/alle-produkte/boote/',
         image: '/Images/promot_logo.webp'
     },
     {
