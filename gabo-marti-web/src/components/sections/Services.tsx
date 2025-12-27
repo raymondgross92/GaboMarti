@@ -1,5 +1,6 @@
 import { Wrench, Anchor, Warehouse, Truck, ClipboardCheck, Radar } from 'lucide-react';
 import SectionHeading from '../ui/SectionHeading';
+import ScrollAnimation from '../ui/ScrollAnimation';
 import styles from './Services.module.css';
 
 const SERVICES = [
@@ -39,17 +40,19 @@ export default function Services() {
     return (
         <section id="services" className={`section ${styles.section}`}>
             <div className="container">
-                <SectionHeading title="Unsere Leistungen" subtitle="Qualität seit über 40 Jahren" />
+                <ScrollAnimation>
+                    <SectionHeading title="Unsere Leistungen" subtitle="Qualität seit über 40 Jahren" />
 
-                <div className={styles.grid}>
-                    {SERVICES.map((service, index) => (
-                        <div key={index} className={styles.card}>
-                            <div className={styles.iconWrapper}>{service.icon}</div>
-                            <h3 className={styles.cardTitle}>{service.title}</h3>
-                            <p className={styles.cardText}>{service.text}</p>
-                        </div>
-                    ))}
-                </div>
+                    <div className={styles.grid}>
+                        {SERVICES.map((service, index) => (
+                            <div key={index} className={styles.card}>
+                                <div className={styles.iconWrapper}>{service.icon}</div>
+                                <h3 className={styles.cardTitle}>{service.title}</h3>
+                                <p className={styles.cardText}>{service.text}</p>
+                            </div>
+                        ))}
+                    </div>
+                </ScrollAnimation>
             </div>
         </section>
     );
