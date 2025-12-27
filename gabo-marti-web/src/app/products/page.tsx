@@ -44,7 +44,7 @@ const PRODUCTS = [
         title: 'Echolote & Navigation',
         text: 'Professionelle Echolote, Fishfinder und Navigationssysteme.',
         color: '#FFFFFF',
-        link: null,
+        link: '/contact',
         icon: Radar
     }
 ];
