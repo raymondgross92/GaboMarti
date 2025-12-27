@@ -37,12 +37,7 @@ const PRODUCTS = [
         color: '#205EAC', // Slightly different blue
         link: 'https://promot.ch/produkte-type/alle-produkte/anhaenger/respo/'
     },
-    {
-        title: 'Angelshop',
-        text: 'Besuchen Sie unseren Angelshop vor Ort. Wir führen ein breites Sortiment an Zubehör für Fischer und Bootsbesitzer.',
-        color: '#475569',
-        link: null
-    },
+
     {
         title: 'Echolote & Navigation',
         text: 'Professionelle Echolote, Fishfinder und Navigationssysteme.',

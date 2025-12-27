@@ -49,6 +49,19 @@ export default function About() {
                                 <strong>Unsere Philosophie:</strong> Wir reparieren mit Qualität!
                             </p>
 
+                            <div style={{
+                                marginTop: '2rem',
+                                padding: '1.5rem',
+                                backgroundColor: 'rgba(14, 165, 233, 0.1)', // Light sky blue background
+                                borderLeft: '4px solid var(--primary)',
+                                borderRadius: '0.5rem'
+                            }}>
+                                <h4 style={{ margin: '0 0 0.5rem 0', color: 'var(--primary)', fontSize: '1.1rem' }}>Besuchen Sie unseren Angelshop</h4>
+                                <p style={{ margin: 0, fontSize: '0.95rem' }}>
+                                    Entdecken Sie unser breites Sortiment an Zubehör für Fischer und Bootsfreunde direkt bei uns vor Ort in Neuenkirch.
+                                </p>
+                            </div>
+
                         </div>
                         <div className={styles.imagePlaceholder}>
                             {/* Placeholder for "Vorstellung der Inhaber/Familie" image */}
