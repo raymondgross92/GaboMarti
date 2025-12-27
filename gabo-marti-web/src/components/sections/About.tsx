@@ -48,6 +48,9 @@ export default function About() {
                             <p>
                                 <strong>Unsere Philosophie:</strong> Wir reparieren mit Qualität!
                             </p>
+                            <p>
+                                Zudem legen wir grossen Wert auf eine <strong>persönliche Beratung</strong>, um das ideale Boot oder den passenden Motor für Ihre Bedürfnisse zu finden. Besuchen Sie auch unseren <strong>Angelshop</strong> direkt vor Ort – wir führen ein breites Sortiment für Fischer und Bootsfreunde.
+                            </p>
                         </div>
                         <div className={styles.imagePlaceholder}>
                             {/* Placeholder for "Vorstellung der Inhaber/Familie" image */}
