@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Anchor, Mail, MapPin, Phone } from 'lucide-react';
+import { Anchor, Mail, MapPin, Phone, Facebook, Instagram } from 'lucide-react';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -24,9 +24,10 @@ export default function Footer() {
                     <div className={styles.column}>
                         <h3>Bereiche</h3>
                         <div className={styles.linkPool}>
-                            <Link href="/services" className={styles.footerLink}>Service & Unterhalt</Link>
-                            <Link href="/services" className={styles.footerLink}>Winterlager</Link>
-                            <Link href="/boats" className={styles.footerLink}>Bootsmarkt</Link>
+                            <Link href="/boats" className={styles.footerLink}>Neu & Occasionen</Link>
+                            <Link href="/products" className={styles.footerLink}>Motoren & Zubehör</Link>
+                            <Link href="/services" className={styles.footerLink}>Dienstleistungen</Link>
+                            <Link href="/about" className={styles.footerLink}>Über uns</Link>
                             <Link href="/contact" className={styles.footerLink}>Kontakt</Link>
                         </div>
                     </div>
@@ -49,10 +50,28 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
+
+                    {/* Social Media */}
+                    <div className={styles.column}>
+                        <h3>Folgen Sie uns auf Social Media</h3>
+                        <div style={{ display: 'flex', gap: '1rem' }}>
+                            <a href="https://www.facebook.com/people/GABO-Marti-GmbH/100062130264042/#" target="_blank" rel="noopener noreferrer" style={{ color: '#CBD5E1', transition: 'color 0.2s' }} className="hover:text-white">
+                                <Facebook size={24} />
+                            </a>
+                            <a href="https://www.instagram.com/gabomartigmbh/#" target="_blank" rel="noopener noreferrer" style={{ color: '#CBD5E1', transition: 'color 0.2s' }} className="hover:text-white">
+                                <Instagram size={24} />
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 <div className={styles.bottom}>
                     <p>&copy; {currentYear} Gabo Marti GmbH. Alle Rechte vorbehalten.</p>
+                    <div style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem', opacity: 0.8, fontSize: '0.9rem' }}>
+                        <Link href="/privacy" style={{ color: 'white', textDecoration: 'none' }}>Datenschutz</Link>
+                        <span>|</span>
+                        <Link href="/impressum" style={{ color: 'white', textDecoration: 'none' }}>Impressum</Link>
+                    </div>
                 </div>
             </div>
         </footer>

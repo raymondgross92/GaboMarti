@@ -37,8 +37,18 @@ export default function Contact() {
                                 </p>
                             </div>
 
-                            <div className={styles.mapPlaceholder}>
-                                Karte wird geladen...
+                            <div className={styles.mapPlaceholder} style={{ padding: 0, overflow: 'hidden' }}>
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    frameBorder="0"
+                                    scrolling="no"
+                                    marginHeight={0}
+                                    marginWidth={0}
+                                    src="https://maps.google.com/maps?q=Sonnmattstrasse+1+6206+Neuenkirch&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                    title="Standort Gabo Marti GmbH"
+                                    style={{ border: 0, display: 'block' }}
+                                ></iframe>
                             </div>
                         </div>
 
