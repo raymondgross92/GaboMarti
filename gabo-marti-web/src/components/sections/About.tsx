@@ -162,16 +162,22 @@ export default function About() {
                             <h3 className={styles.subtitle} style={{ marginBottom: '1.5rem', fontSize: '1.5rem' }}>Wir sind Mitglied des</h3>
                             <div style={{
                                 width: '100%',
-                                height: '150px',
-                                backgroundColor: 'rgba(0,0,0,0.05)',
-                                border: '1px dashed var(--border)',
+                                height: '200px',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
                                 borderRadius: '0.5rem',
-                                color: 'var(--text-light)'
+                                padding: '1rem'
                             }}>
-                                Logo / Verband
+                                <img
+                                    src="/Images/Fischverein_sempachersee.jpg"
+                                    alt="Fischverein Sempachersee"
+                                    style={{
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain'
+                                    }}
+                                />
                             </div>
                         </div>
 
@@ -186,16 +192,22 @@ export default function About() {
                             <h3 className={styles.subtitle} style={{ marginBottom: '1.5rem', fontSize: '1.5rem' }}>Partner die wir empfehlen</h3>
                             <div style={{
                                 width: '100%',
-                                height: '150px',
-                                backgroundColor: 'rgba(0,0,0,0.05)',
-                                border: '1px dashed var(--border)',
+                                height: '200px',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
                                 borderRadius: '0.5rem',
-                                color: 'var(--text-light)'
+                                padding: '1rem'
                             }}>
-                                Logos / Empfehlungen
+                                <img
+                                    src="/Images/segelschule_sempachersee.png"
+                                    alt="Segelschule Sempachersee"
+                                    style={{
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain'
+                                    }}
+                                />
                             </div>
                         </div>
                     </div>
