@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Button from '../ui/Button';
 import SectionHeading from '../ui/SectionHeading';
 import ScrollAnimation from '../ui/ScrollAnimation';
@@ -8,6 +8,30 @@ import styles from './Contact.module.css';
 
 export default function Contact() {
     const [honey, setHoney] = useState('');
+    const [marketingConsent, setMarketingConsent] = useState(false);
+
+    // Check consent on mount and listen for changes
+    useEffect(() => {
+        const checkConsent = () => {
+            const preferences = localStorage.getItem('cookiePreferences');
+            if (preferences) {
+                const { marketing } = JSON.parse(preferences);
+                setMarketingConsent(marketing);
+            }
+        };
+
+        checkConsent();
+
+        window.addEventListener('cookieConsentChanged', checkConsent);
+        return () => window.removeEventListener('cookieConsentChanged', checkConsent);
+    }, []);
+
+    const handleAcceptMarketing = () => {
+        const preferences = { essential: true, marketing: true };
+        localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+        localStorage.setItem('cookieConsent', 'custom'); // or 'accepted' if all else is essentially true
+        window.dispatchEvent(new Event('cookieConsentChanged'));
+    };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -79,18 +103,56 @@ export default function Contact() {
                                 </p>
                             </div>
 
-                            <div className={styles.mapPlaceholder} style={{ padding: 0, overflow: 'hidden' }}>
-                                <iframe
-                                    width="100%"
-                                    height="100%"
-                                    frameBorder="0"
-                                    scrolling="no"
-                                    marginHeight={0}
-                                    marginWidth={0}
-                                    src="https://maps.google.com/maps?q=Sonnmattstrasse+1+6206+Neuenkirch&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                                    title="Standort Gabo Marti GmbH"
-                                    style={{ border: 0, display: 'block' }}
-                                ></iframe>
+
+                            <div className={styles.mapPlaceholder} style={{ padding: 0, overflow: 'hidden', position: 'relative' }}>
+                                {marketingConsent ? (
+                                    <iframe
+                                        width="100%"
+                                        height="100%"
+                                        frameBorder="0"
+                                        scrolling="no"
+                                        marginHeight={0}
+                                        marginWidth={0}
+                                        src="https://maps.google.com/maps?q=Sonnmattstrasse+1+6206+Neuenkirch&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                        title="Standort Gabo Marti GmbH"
+                                        style={{ border: 0, display: 'block' }}
+                                    ></iframe>
+                                ) : (
+                                    <div style={{
+                                        position: 'absolute',
+                                        top: 0,
+                                        left: 0,
+                                        right: 0,
+                                        bottom: 0,
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        backgroundColor: '#1e293b',
+                                        color: 'white',
+                                        padding: '2rem',
+                                        textAlign: 'center',
+                                        gap: '1rem'
+                                    }}>
+                                        <p>
+                                            Um die Google Maps Karte zu sehen, müssen Sie Marketing-Cookies zustimmen.
+                                        </p>
+                                        <button
+                                            onClick={handleAcceptMarketing}
+                                            style={{
+                                                padding: '0.75rem 1.5rem',
+                                                backgroundColor: '#0ea5e9',
+                                                color: 'white',
+                                                border: 'none',
+                                                borderRadius: '0.5rem',
+                                                cursor: 'pointer',
+                                                fontWeight: 600
+                                            }}
+                                        >
+                                            Karte laden (Cookies akzeptieren)
+                                        </button>
+                                    </div>
+                                )}
                             </div>
                         </div>
 

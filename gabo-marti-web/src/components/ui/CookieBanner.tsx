@@ -23,6 +23,7 @@ export default function CookieBanner() {
         localStorage.setItem('cookiePreferences', JSON.stringify({ essential: true, marketing: true }));
         setShowBanner(false);
         setShowSettings(false);
+        window.dispatchEvent(new Event('cookieConsentChanged'));
     };
 
     const handleDeclineAll = () => {
@@ -30,6 +31,7 @@ export default function CookieBanner() {
         localStorage.setItem('cookiePreferences', JSON.stringify({ essential: true, marketing: false }));
         setShowBanner(false);
         setShowSettings(false);
+        window.dispatchEvent(new Event('cookieConsentChanged'));
     };
 
     const handleSavePreferences = () => {
@@ -37,6 +39,7 @@ export default function CookieBanner() {
         localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
         setShowBanner(false);
         setShowSettings(false);
+        window.dispatchEvent(new Event('cookieConsentChanged'));
     };
 
     if (!showBanner) return null;
