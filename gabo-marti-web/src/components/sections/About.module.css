@@ -1,0 +1,36 @@
+.section {
+    background-color: var(--background);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.textBlock {
+    font-size: 1.125rem;
+    color: var(--text-light);
+}
+
+.textBlock p {
+    margin-bottom: 1.5rem;
+}
+
+.imagePlaceholder {
+    background-color: var(--surface);
+    border-radius: 8px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

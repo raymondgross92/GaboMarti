@@ -1,0 +1,83 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.desktopMenu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.link {
+    font-weight: 500;
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+.link:hover,
+.link.active {
+    color: var(--secondary);
+}
+
+.menuButton {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary);
+}
+
+.mobileMenu {
+    display: none;
+    border-top: 1px solid var(--border);
+    background-color: white;
+    padding: 1rem var(--container-padding);
+}
+
+.mobileLink {
+    display: block;
+    padding: 1rem 0;
+    font-weight: 500;
+    border-bottom: 1px solid var(--surface);
+}
+
+.mobileLink:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .desktopMenu {
+        display: none;
+    }
+
+    .menuButton {
+        display: block;
+    }
+
+    .mobileMenu.open {
+        display: block;
+    }
+}
