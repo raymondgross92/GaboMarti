@@ -10,7 +10,14 @@ export default function PrivacyPage() {
                 <ScrollAnimation>
                     <SectionHeading title="Datenschutz" subtitle="Rechtliche Hinweise" />
 
-                    <div className="prose" style={{ maxWidth: '800px', margin: '0 auto', color: 'var(--text)' }}>
+                    <div className="prose" style={{
+                        maxWidth: '800px',
+                        margin: '0 auto',
+                        color: 'var(--text)',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '1.5rem'
+                    }}>
                         <p>
                             Verantwortliche Stelle im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:
                         </p>
