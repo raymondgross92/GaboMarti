@@ -45,7 +45,8 @@ const PRODUCTS = [
         text: 'Professionelle Echolote, Fishfinder und Navigationssysteme.',
         color: '#FFFFFF',
         link: '/contact',
-        icon: Radar
+        icon: Radar,
+        buttonText: 'Anfragen'
     }
 ];
 
@@ -80,7 +81,7 @@ export default function ProductsPage() {
                                             <div className={styles.cardText}>{prod.text}</div>
                                             <div className={styles.buttonContainer}>
                                                 <Button variant="primary" fullWidth>
-                                                    Zum Angebot
+                                                    {(prod as any).buttonText || 'Zum Angebot'}
                                                 </Button>
                                             </div>
                                         </div>
