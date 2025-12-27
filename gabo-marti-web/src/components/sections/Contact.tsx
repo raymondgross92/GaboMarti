@@ -119,6 +119,11 @@ export default function Contact() {
                             </div>
 
                             <div className={styles.formGroup}>
+                                <label htmlFor="location" className={styles.label}>Ort</label>
+                                <input type="text" id="location" name="location" className={styles.input} placeholder="Ihr Wohnort" required />
+                            </div>
+
+                            <div className={styles.formGroup}>
                                 <label htmlFor="email" className={styles.label}>E-Mail</label>
                                 <input type="email" id="email" name="email" className={styles.input} placeholder="Ihre E-Mail Adresse" required />
                             </div>
@@ -126,11 +131,6 @@ export default function Contact() {
                             <div className={styles.formGroup}>
                                 <label htmlFor="phone" className={styles.label}>Telefon (optional)</label>
                                 <input type="tel" id="phone" name="phone" className={styles.input} placeholder="Ihre Telefonnummer" />
-                            </div>
-
-                            <div className={styles.formGroup}>
-                                <label htmlFor="location" className={styles.label}>Ort</label>
-                                <input type="text" id="location" name="location" className={styles.input} placeholder="Ihr Wohnort" required />
                             </div>
 
                             <div className={styles.formGroup}>
