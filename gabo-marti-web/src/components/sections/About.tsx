@@ -24,7 +24,11 @@ export default function About() {
         { id: 1, img: '/Images/logo_1.jpg', alt: 'Partner 1' },
         { id: 2, img: '/Images/logo_2.png', alt: 'Partner 2' },
         { id: 3, img: '/Images/logo_3.png', alt: 'Partner 3' },
-        ...Array.from({ length: 5 }, (_, i) => ({ id: i + 4, img: null, alt: `Partner ${i + 4}` }))
+        { id: 4, img: '/Images/logo_4.png', alt: 'Partner 4' },
+        { id: 5, img: '/Images/logo_5.png', alt: 'Partner 5' },
+        { id: 6, img: '/Images/logo_6.png', alt: 'Partner 6' },
+        { id: 7, img: '/Images/logo_7.png', alt: 'Partner 7' },
+        { id: 8, img: '/Images/logo_8.png', alt: 'Partner 8' },
     ];
     const visibleSponsors = allSponsors.slice(page * itemsPerPage, (page + 1) * itemsPerPage);
 
