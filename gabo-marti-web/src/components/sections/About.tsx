@@ -148,6 +148,58 @@ export default function About() {
                         </div>
                     </div>
                 </ScrollAnimation>
+
+                <ScrollAnimation>
+                    <div style={{ marginTop: '4rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                        {/* Member of Section */}
+                        <div style={{
+                            backgroundColor: 'white',
+                            padding: '2rem',
+                            borderRadius: '1rem',
+                            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+                            border: '1px solid var(--border)'
+                        }}>
+                            <h3 className={styles.subtitle} style={{ marginBottom: '1.5rem', fontSize: '1.5rem' }}>Wir sind Mitglied des</h3>
+                            <div style={{
+                                width: '100%',
+                                height: '150px',
+                                backgroundColor: 'rgba(0,0,0,0.05)',
+                                border: '1px dashed var(--border)',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                borderRadius: '0.5rem',
+                                color: 'var(--text-light)'
+                            }}>
+                                Logo / Verband
+                            </div>
+                        </div>
+
+                        {/* Recommended Partners Section */}
+                        <div style={{
+                            backgroundColor: 'white',
+                            padding: '2rem',
+                            borderRadius: '1rem',
+                            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+                            border: '1px solid var(--border)'
+                        }}>
+                            <h3 className={styles.subtitle} style={{ marginBottom: '1.5rem', fontSize: '1.5rem' }}>Partner die wir empfehlen</h3>
+                            <div style={{
+                                width: '100%',
+                                height: '150px',
+                                backgroundColor: 'rgba(0,0,0,0.05)',
+                                border: '1px dashed var(--border)',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                borderRadius: '0.5rem',
+                                color: 'var(--text-light)'
+                            }}>
+                                Logos / Empfehlungen
+                            </div>
+                        </div>
+                    </div>
+                </ScrollAnimation>
             </div>
         </section>
     );
