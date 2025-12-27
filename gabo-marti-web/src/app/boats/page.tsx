@@ -22,7 +22,7 @@ const BOATS = [
             </>
         ),
         color: '#FFFFFF', // White background
-        link: 'https://promot.ch/produkte-type/alle-produkte/boote/buster/',
+        link: 'https://promot.ch/',
         image: null // Will fallback to text "ProMot" in the rendering logic below
     },
     {
