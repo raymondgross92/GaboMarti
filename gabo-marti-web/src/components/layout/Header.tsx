@@ -7,11 +7,12 @@ import Button from '../ui/Button';
 import styles from './Header.module.css';
 
 const NAV_ITEMS = [
-    { label: 'Home', href: '#hero' },
-    { label: 'Produkte', href: '#products' },
-    { label: 'Dienstleistungen', href: '#services' },
-    { label: 'Über uns', href: '#about' },
-    { label: 'Kontakt', href: '#contact' },
+    { label: 'Home', href: '/' },
+    { label: 'Neu & Occasionen', href: '/boats' },
+    { label: 'Motoren & Zubehör', href: '/products' },
+    { label: 'Dienstleistungen', href: '/services' },
+    { label: 'Über uns', href: '/about' },
+    { label: 'Kontakt', href: '/contact' },
 ];
 
 export default function Header() {
@@ -32,16 +33,11 @@ export default function Header() {
                             key={item.href}
                             href={item.href}
                             className={styles.link}
-                            onClick={(e) => {
-                                e.preventDefault();
-                                const element = document.querySelector(item.href);
-                                element?.scrollIntoView({ behavior: 'smooth' });
-                            }}
                         >
                             {item.label}
                         </Link>
                     ))}
-                    <Button href="#contact" variant="primary">Angebot anfragen</Button>
+                    <Button href="/contact" variant="primary">Angebot anfragen</Button>
                 </nav>
 
                 {/* Mobile Menu Button */}
@@ -61,18 +57,13 @@ export default function Header() {
                         key={item.href}
                         href={item.href}
                         className={styles.mobileLink}
-                        onClick={(e) => {
-                            setIsOpen(false);
-                            e.preventDefault();
-                            const element = document.querySelector(item.href);
-                            element?.scrollIntoView({ behavior: 'smooth' });
-                        }}
+                        onClick={() => setIsOpen(false)}
                     >
                         {item.label}
                     </Link>
                 ))}
                 <div style={{ marginTop: '1rem' }}>
-                    <Button href="#contact" fullWidth>Angebot anfragen</Button>
+                    <Button href="/contact" fullWidth>Angebot anfragen</Button>
                 </div>
             </div>
         </header>

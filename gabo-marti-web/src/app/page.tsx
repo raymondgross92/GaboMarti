@@ -9,11 +9,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <About />
-      <Services />
-      <Products />
-      <Gallery />
-      <Contact />
     </>
   );
 }

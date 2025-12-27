@@ -24,10 +24,10 @@ export default function Footer() {
                     <div className={styles.column}>
                         <h3>Bereiche</h3>
                         <div className={styles.linkPool}>
-                            <Link href="#services" className={styles.footerLink}>Service & Unterhalt</Link>
-                            <Link href="#services" className={styles.footerLink}>Winterlager</Link>
-                            <Link href="#products" className={styles.footerLink}>Bootsmarkt</Link>
-                            <Link href="#contact" className={styles.footerLink}>Kontakt</Link>
+                            <Link href="/services" className={styles.footerLink}>Service & Unterhalt</Link>
+                            <Link href="/services" className={styles.footerLink}>Winterlager</Link>
+                            <Link href="/boats" className={styles.footerLink}>Bootsmarkt</Link>
+                            <Link href="/contact" className={styles.footerLink}>Kontakt</Link>
                         </div>
                     </div>
 

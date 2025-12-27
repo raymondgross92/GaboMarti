@@ -23,8 +23,8 @@ export default function Hero() {
                     Ihr Partner für Ihr Boot. Wir rufen Sie gerne zurück!
                 </p>
                 <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                    <Button href="#contact" variant="primary">Kontakt aufnehmen</Button>
-                    <Button href="#products" variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
+                    <Button href="/contact" variant="primary">Kontakt aufnehmen</Button>
+                    <Button href="/boats" variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
                         Angebote ansehen
                     </Button>
                 </div>
