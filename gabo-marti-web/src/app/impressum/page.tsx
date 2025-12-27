@@ -10,7 +10,7 @@ export default function ImpressumPage() {
                 <ScrollAnimation>
                     <SectionHeading title="Impressum" subtitle="Rechtliche Hinweise" />
 
-                    <div className="prose" style={{ maxWidth: '800px', margin: '0 auto', color: 'var(--text)' }}>
+                    <div className="prose" style={{ maxWidth: '800px', margin: '0 auto', color: 'var(--text)', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                         <p>
                             <strong>Gabo Marti GmbH</strong> ist ein Fachgeschäft rund um das Thema Motorboote & Zubehör.
                         </p>
