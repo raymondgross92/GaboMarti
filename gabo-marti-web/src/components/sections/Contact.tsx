@@ -129,6 +129,11 @@ export default function Contact() {
                             </div>
 
                             <div className={styles.formGroup}>
+                                <label htmlFor="location" className={styles.label}>Ort</label>
+                                <input type="text" id="location" name="location" className={styles.input} placeholder="Ihr Wohnort" required />
+                            </div>
+
+                            <div className={styles.formGroup}>
                                 <label htmlFor="message" className={styles.label}>Nachricht</label>
                                 <textarea id="message" name="message" className={styles.textarea} placeholder="Wie können wir Ihnen helfen?" required></textarea>
                             </div>
