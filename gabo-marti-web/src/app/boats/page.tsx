@@ -23,14 +23,14 @@ const BOATS = [
         ),
         color: '#FFFFFF', // White background
         link: 'https://promot.ch/',
-        image: null // Will fallback to text "ProMot" in the rendering logic below
+        image: '/Images/promot_logo.webp'
     },
     {
         title: 'Occasionen',
         text: 'Finden Sie alle unsere aktuellen Inserate direkt auf Boot24.',
         color: '#FFFFFF', // White background
         link: 'https://www.boot24.ch/chde/haendler/1833/gabo-marti-gmbh/',
-        image: 'https://www.boot24.ch/images/logo-boot24.svg'
+        image: '/Images/boot24_logo.png'
     }
 ];
 
@@ -63,34 +63,16 @@ export default function BoatsPage() {
                                                 padding: '2rem'
                                             }}
                                         >
-                                            {boat.title === 'Neuboote' ? (
-                                                <div style={{
-                                                    fontSize: '2.5rem',
-                                                    fontWeight: '900',
-                                                    color: '#E30613', // Promot Red
-                                                    fontFamily: 'Helvetica, Arial, sans-serif',
-                                                    letterSpacing: '-0.05em'
-                                                }}>
-                                                    ProMot
-                                                </div>
-                                            ) : (
-                                                <div style={{
-                                                    fontSize: '2rem',
-                                                    fontWeight: 'bold',
-                                                    color: '#00428A', // Boot24 Blue
-                                                    display: 'flex',
-                                                    alignItems: 'center',
-                                                    gap: '0.5rem'
-                                                }}>
-                                                    {/* Simple SVG Logo representation for Boot24 */}
-                                                    <svg viewBox="0 0 24 24" width="40" height="40" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                                        <path d="M2 21h20"></path>
-                                                        <path d="M3.5 12l2-7h13l2 7"></path>
-                                                        <path d="M2 21c0-3 1.5-5 5-5s5 2 5 5"></path>
-                                                        <path d="M17 21a5 5 0 0 0-5-5"></path>
-                                                    </svg>
-                                                    Boot24
-                                                </div>
+                                            {boat.image && (
+                                                <img
+                                                    src={boat.image}
+                                                    alt={boat.title}
+                                                    style={{
+                                                        maxWidth: '80%',
+                                                        maxHeight: '80%',
+                                                        objectFit: 'contain'
+                                                    }}
+                                                />
                                             )}
                                         </div>
                                         <div className={styles.overlay}>
