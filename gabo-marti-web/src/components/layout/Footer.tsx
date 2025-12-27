@@ -38,15 +38,35 @@ export default function Footer() {
                         <div className={styles.linkPool}>
                             <div style={{ display: 'flex', gap: '0.75rem', color: '#CBD5E1' }}>
                                 <MapPin size={20} />
-                                <span>Sonnmattstrasse 1<br />6206 Neuenkirch</span>
+                                <a
+                                    href="https://www.google.com/maps/search/?api=1&query=Sonnmattstrasse+1+6206+Neuenkirch"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{ color: 'inherit', textDecoration: 'none' }}
+                                    className="hover:text-white transition-colors"
+                                >
+                                    Sonnmattstrasse 1<br />6206 Neuenkirch
+                                </a>
                             </div>
                             <div style={{ display: 'flex', gap: '0.75rem', color: '#CBD5E1' }}>
                                 <Phone size={20} />
-                                <span>+41 41 467 10 46</span>
+                                <a
+                                    href="tel:+41414671046"
+                                    style={{ color: 'inherit', textDecoration: 'none' }}
+                                    className="hover:text-white transition-colors"
+                                >
+                                    +41 41 467 10 46
+                                </a>
                             </div>
                             <div style={{ display: 'flex', gap: '0.75rem', color: '#CBD5E1' }}>
                                 <Mail size={20} />
-                                <span>info@gabomarti.ch</span>
+                                <a
+                                    href="mailto:info@gabomarti.ch"
+                                    style={{ color: 'inherit', textDecoration: 'none' }}
+                                    className="hover:text-white transition-colors"
+                                >
+                                    info@gabomarti.ch
+                                </a>
                             </div>
                         </div>
                     </div>

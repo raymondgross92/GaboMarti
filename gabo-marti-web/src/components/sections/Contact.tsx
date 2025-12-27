@@ -1,11 +1,24 @@
 'use client';
 
+import { useState } from 'react';
 import Button from '../ui/Button';
 import SectionHeading from '../ui/SectionHeading';
 import ScrollAnimation from '../ui/ScrollAnimation';
 import styles from './Contact.module.css';
 
 export default function Contact() {
+    const [honey, setHoney] = useState('');
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (honey) {
+            // Honeypot filled = spam
+            return;
+        }
+        // Success simulation
+        alert('Vielen Dank! Ihre Nachricht wurde gesendet.');
+    };
+
     return (
         <section id="contact" className={`section ${styles.section}`}>
             <div className="container">
@@ -53,20 +66,36 @@ export default function Contact() {
                         </div>
 
                         {/* Form Side */}
-                        <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
+                        <form className={styles.form} onSubmit={handleSubmit}>
+                            {/* Honeypot Field */}
+                            <input
+                                type="text"
+                                name="_honey"
+                                style={{ display: 'none' }}
+                                tabIndex={-1}
+                                autoComplete="off"
+                                value={honey}
+                                onChange={(e) => setHoney(e.target.value)}
+                            />
+
                             <div className={styles.formGroup}>
                                 <label htmlFor="name" className={styles.label}>Name</label>
-                                <input type="text" id="name" className={styles.input} placeholder="Ihr Name" />
+                                <input type="text" id="name" className={styles.input} placeholder="Ihr Name" required />
                             </div>
 
                             <div className={styles.formGroup}>
                                 <label htmlFor="email" className={styles.label}>E-Mail</label>
-                                <input type="email" id="email" className={styles.input} placeholder="Ihre E-Mail Adresse" />
+                                <input type="email" id="email" className={styles.input} placeholder="Ihre E-Mail Adresse" required />
+                            </div>
+
+                            <div className={styles.formGroup}>
+                                <label htmlFor="phone" className={styles.label}>Telefon (optional)</label>
+                                <input type="tel" id="phone" className={styles.input} placeholder="Ihre Telefonnummer" />
                             </div>
 
                             <div className={styles.formGroup}>
                                 <label htmlFor="message" className={styles.label}>Nachricht</label>
-                                <textarea id="message" className={styles.textarea} placeholder="Wie können wir Ihnen helfen?"></textarea>
+                                <textarea id="message" className={styles.textarea} placeholder="Wie können wir Ihnen helfen?" required></textarea>
                             </div>
 
                             <Button type="submit" variant="primary" fullWidth>Nachricht senden</Button>
