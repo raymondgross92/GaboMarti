@@ -26,6 +26,36 @@ export default function About() {
                         </div>
                     </div>
                 </ScrollAnimation>
+
+                <ScrollAnimation>
+                    <div style={{ marginTop: '4rem' }}>
+                        <h3 className={styles.subtitle} style={{ textAlign: 'center', marginBottom: '2rem' }}>Unsere Partner & Sponsoren</h3>
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+                            gap: '2rem',
+                            alignItems: 'center',
+                            justifyItems: 'center'
+                        }}>
+                            {/* Placeholders for 4 logos */}
+                            {[1, 2, 3, 4].map((i) => (
+                                <div key={i} style={{
+                                    width: '100%',
+                                    height: '100px',
+                                    backgroundColor: 'rgba(0,0,0,0.05)',
+                                    border: '1px dashed var(--border)',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    borderRadius: '0.5rem',
+                                    color: 'var(--text-light)'
+                                }}>
+                                    Logo {i}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </ScrollAnimation>
             </div>
         </section>
     );
