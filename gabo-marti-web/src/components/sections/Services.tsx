@@ -1,4 +1,4 @@
-import { Wrench, Anchor, Warehouse, Truck, ClipboardCheck, Radar } from 'lucide-react';
+import { Wrench, Anchor, Warehouse, Truck, ClipboardCheck, Radar, Users } from 'lucide-react';
 import SectionHeading from '../ui/SectionHeading';
 import ScrollAnimation from '../ui/ScrollAnimation';
 import styles from './Services.module.css';
@@ -33,6 +33,11 @@ const SERVICES = [
         icon: <ClipboardCheck size={24} />,
         title: 'Sicherheits-Check',
         text: 'Wir prüfen Ihr Boot auf Herz und Nieren, damit Sie die Zeit auf dem See sorgenfrei geniessen können.'
+    },
+    {
+        icon: <Users size={24} />,
+        title: 'Persönliche Beratung',
+        text: 'Wir nehmen uns Zeit für Sie. Egal ob Neukauf oder Reparatur – wir beraten Sie kompetent, ehrlich und individuell.'
     }
 ];
 
