@@ -13,10 +13,20 @@ const PRODUCTS = [
         link: 'https://promot.ch/produkte-type/alle-produkte/marine-motoren/yamaha/'
     },
     {
-        title: 'Bootsanhänger',
-        text: 'Sichere und zuverlässige Bootsanhänger für jeden Bedarf.',
+        title: 'Respo Anhänger',
+        text: (
+            <>
+                <div style={{ marginBottom: '0.5rem' }}>
+                    <strong>RESPO</strong>
+                </div>
+                <div>
+                    Respo produziert Bootsanhänger mit einem Gesamtgewicht bis zu 3500 kg und bietet eine reiche Auswahl an Anhänger, Zubehör und Ersatzteilen.<br />
+                    Mit dem Respo Anhänger wird das ein- und auswassern zum Kinderspiel.
+                </div>
+            </>
+        ),
         color: '#205EAC', // Slightly different blue
-        link: null
+        link: 'https://promot.ch/produkte-type/alle-produkte/anhaenger/respo/'
     },
     {
         title: 'Echolote & Navigation',
@@ -57,7 +67,7 @@ export default function ProductsPage() {
                                         />
                                         <div className={styles.overlay}>
                                             <h3 className={styles.cardTitle}>{prod.title}</h3>
-                                            <p className={styles.cardText}>{prod.text}</p>
+                                            <div className={styles.cardText}>{prod.text}</div>
                                             <div style={{ marginTop: 'auto' }}>
                                                 <Button variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
                                                     Zum Angebot
