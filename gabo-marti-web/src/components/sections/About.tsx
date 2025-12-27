@@ -22,7 +22,9 @@ export default function About() {
     // Sponsors data
     const allSponsors = [
         { id: 1, img: '/Images/logo_1.jpg', alt: 'Partner 1' },
-        ...Array.from({ length: 7 }, (_, i) => ({ id: i + 2, img: null, alt: `Partner ${i + 2}` }))
+        { id: 2, img: '/Images/logo_2.png', alt: 'Partner 2' },
+        { id: 3, img: '/Images/logo_3.png', alt: 'Partner 3' },
+        ...Array.from({ length: 5 }, (_, i) => ({ id: i + 4, img: null, alt: `Partner ${i + 4}` }))
     ];
     const visibleSponsors = allSponsors.slice(page * itemsPerPage, (page + 1) * itemsPerPage);
 
