@@ -1,9 +1,10 @@
 'use client';
 
+import { Radar } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
 import ScrollAnimation from '@/components/ui/ScrollAnimation';
 import Button from '@/components/ui/Button';
-import styles from '@/components/sections/Products.module.css';
+import styles from './products.module.css';
 
 const PRODUCTS = [
     {
@@ -18,8 +19,9 @@ const PRODUCTS = [
                 </div>
             </>
         ),
-        color: '#134074',
-        link: 'https://promot.ch/produkte-type/alle-produkte/marine-motoren/yamaha/'
+        color: '#FFFFFF',
+        link: 'https://promot.ch/produkte-type/alle-produkte/marine-motoren/yamaha/',
+        image: '/Images/promot_logo.webp' // Promot distributes Yamaha
     },
     {
         title: 'Respo Anhänger',
@@ -34,21 +36,22 @@ const PRODUCTS = [
                 </div>
             </>
         ),
-        color: '#205EAC', // Slightly different blue
-        link: 'https://promot.ch/produkte-type/alle-produkte/anhaenger/respo/'
+        color: '#FFFFFF',
+        link: 'https://promot.ch/produkte-type/alle-produkte/anhaenger/respo/',
+        image: '/Images/promot_logo.webp' // Promot distributes Respo
     },
-
     {
         title: 'Echolote & Navigation',
         text: 'Professionelle Echolote, Fishfinder und Navigationssysteme.',
-        color: '#8DA9C4',
-        link: null
+        color: '#FFFFFF',
+        link: null,
+        icon: Radar
     }
 ];
 
 export default function ProductsPage() {
     return (
-        <div style={{ paddingTop: '80px' }}>
+        <div style={{ paddingTop: '80px', paddingBottom: '4rem', backgroundColor: 'var(--background)' }}>
             <section className={`section ${styles.section}`}>
                 <div className="container">
                     <ScrollAnimation>
@@ -63,17 +66,20 @@ export default function ProductsPage() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={styles.card}
-                                        style={{ textDecoration: 'none', display: 'block' }}
                                     >
-                                        <div
-                                            className={styles.cardImage}
-                                            style={{ backgroundColor: prod.color }}
-                                        />
-                                        <div className={styles.overlay}>
+                                        <div className={styles.cardImage}>
+                                            {prod.image && (
+                                                <img
+                                                    src={prod.image}
+                                                    alt={prod.title}
+                                                />
+                                            )}
+                                        </div>
+                                        <div className={styles.cardContent}>
                                             <h3 className={styles.cardTitle}>{prod.title}</h3>
                                             <div className={styles.cardText}>{prod.text}</div>
-                                            <div style={{ marginTop: 'auto' }}>
-                                                <Button variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
+                                            <div className={styles.buttonContainer}>
+                                                <Button variant="primary" fullWidth>
                                                     Zum Angebot
                                                 </Button>
                                             </div>
@@ -81,15 +87,16 @@ export default function ProductsPage() {
                                     </a>
                                 ) : (
                                     <div key={index} className={styles.card}>
-                                        <div
-                                            className={styles.cardImage}
-                                            style={{ backgroundColor: prod.color }}
-                                        />
-                                        <div className={styles.overlay}>
+                                        <div className={styles.cardImage}>
+                                            {prod.icon && (
+                                                <prod.icon size={64} color="var(--primary)" strokeWidth={1.5} />
+                                            )}
+                                        </div>
+                                        <div className={styles.cardContent}>
                                             <h3 className={styles.cardTitle}>{prod.title}</h3>
                                             <p className={styles.cardText}>{prod.text}</p>
-                                            <div style={{ marginTop: 'auto' }}>
-                                                <Button variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
+                                            <div className={styles.buttonContainer}>
+                                                <Button variant="outline" fullWidth>
                                                     Anfragen
                                                 </Button>
                                             </div>
