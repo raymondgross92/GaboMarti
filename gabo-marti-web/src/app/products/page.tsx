@@ -21,7 +21,7 @@ const PRODUCTS = [
         ),
         color: '#FFFFFF',
         link: 'https://promot.ch/produkte-type/alle-produkte/marine-motoren/yamaha/',
-        image: '/Images/promot_logo.webp' // Promot distributes Yamaha
+        image: '/Images/logo_1.jpg' // Yamaha
     },
     {
         title: 'Respo Anhänger',
@@ -38,7 +38,7 @@ const PRODUCTS = [
         ),
         color: '#FFFFFF',
         link: 'https://promot.ch/produkte-type/alle-produkte/anhaenger/respo/',
-        image: '/Images/promot_logo.webp' // Promot distributes Respo
+        image: '/Images/anhänger_logo.png' // Respo
     },
     {
         title: 'Echolote & Navigation',
