@@ -15,7 +15,7 @@ export default function Footer() {
                             <img
                                 src="/Images/gabo_marti_logo.png"
                                 alt="Gabo Marti Logo"
-                                style={{ height: '32px', width: 'auto' }}
+                                style={{ height: '48px', width: 'auto' }}
                             />
                         </div>
                         <p className={styles.text}>
