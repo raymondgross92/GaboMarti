@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Anchor } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Button from '../ui/Button';
 import styles from './Header.module.css';
 
@@ -17,9 +17,18 @@ const NAV_ITEMS = [
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 20);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
-        <header className={styles.header}>
+        <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
             <div className={`container ${styles.nav}`}>
                 <Link href="/" className={styles.logo}>
                     <img
