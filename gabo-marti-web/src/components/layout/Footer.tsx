@@ -39,34 +39,34 @@ export default function Footer() {
                     <div className={styles.column}>
                         <h3>Kontakt</h3>
                         <div className={styles.linkPool}>
-                            <div style={{ display: 'flex', gap: '0.75rem', color: '#CBD5E1' }}>
-                                <MapPin size={20} />
+                            <div style={{ display: 'flex', gap: '0.75rem', color: 'var(--text-main)' }}>
+                                <MapPin size={20} className="text-primary" style={{ color: 'var(--secondary)' }} />
                                 <a
                                     href="https://www.google.com/maps/search/?api=1&query=Sonnmattstrasse+1+6206+Neuenkirch"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     style={{ color: 'inherit', textDecoration: 'none' }}
-                                    className="hover:text-white transition-colors"
+                                    className="hover:text-primary transition-colors"
                                 >
                                     Sonnmattstrasse 1<br />6206 Neuenkirch
                                 </a>
                             </div>
-                            <div style={{ display: 'flex', gap: '0.75rem', color: '#CBD5E1' }}>
-                                <Phone size={20} />
+                            <div style={{ display: 'flex', gap: '0.75rem', color: 'var(--text-main)' }}>
+                                <Phone size={20} style={{ color: 'var(--secondary)' }} />
                                 <a
                                     href="tel:+41414671046"
                                     style={{ color: 'inherit', textDecoration: 'none' }}
-                                    className="hover:text-white transition-colors"
+                                    className="hover:text-primary transition-colors"
                                 >
                                     +41 41 467 10 46
                                 </a>
                             </div>
-                            <div style={{ display: 'flex', gap: '0.75rem', color: '#CBD5E1' }}>
-                                <Mail size={20} />
+                            <div style={{ display: 'flex', gap: '0.75rem', color: 'var(--text-main)' }}>
+                                <Mail size={20} style={{ color: 'var(--secondary)' }} />
                                 <a
                                     href="mailto:info@gabomarti.ch"
                                     style={{ color: 'inherit', textDecoration: 'none' }}
-                                    className="hover:text-white transition-colors"
+                                    className="hover:text-primary transition-colors"
                                 >
                                     info@gabomarti.ch
                                 </a>
