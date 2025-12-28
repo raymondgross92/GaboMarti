@@ -1,14 +1,18 @@
 :root {
-  /* Color Palette - Water Inspired */
-  --primary: #0B2545;     /* Deep Navy */
-  --secondary: #134074;   /* Lighter Navy */
-  --accent: #8DA9C4;      /* Soft Blue/Grey */
-  --highlight: #EEF4ED;   /* Mist / Off-white */
-  
+  /* Color Palette - Water Inspired & Brand Aligned */
+  --primary: #0D3880;
+  /* Brand Navy (Gabo) */
+  --secondary: #A2185B;
+  /* Brand Magenta (Marti) */
+  --accent: #E1E8F5;
+  /* Soft Light Blue for balance */
+  --highlight: #F5F7FA;
+  /* Mist / Off-white */
+
   --text-main: #13315C;
   --text-light: #5B6B7F;
   --text-white: #FFFFFF;
-  
+
   --background: #FFFFFF;
   --surface: #F8FAFC;
   --border: #E2E8F0;
@@ -41,7 +45,12 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
@@ -77,21 +86,32 @@ img {
   padding: var(--section-spacing) 0;
 }
 
-.text-center { text-align: center; }
-.text-white { color: var(--text-white); }
-.bg-surface { background-color: var(--surface); }
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: var(--text-white);
+}
+
+.bg-surface {
+  background-color: var(--surface);
+}
 
 /* Premium Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--surface);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--accent);
   border-radius: 5px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--secondary);
 }
