@@ -22,8 +22,11 @@ export default function Header() {
         <header className={styles.header}>
             <div className={`container ${styles.nav}`}>
                 <Link href="/" className={styles.logo}>
-                    <Anchor size={24} className="text-secondary" />
-                    <span>Gabo Marti</span>
+                    <img
+                        src="/Images/gabo_marti_logo.png"
+                        alt="Gabo Marti Logo"
+                        style={{ height: '40px', width: 'auto' }}
+                    />
                 </Link>
 
                 {/* Desktop Navigation */}

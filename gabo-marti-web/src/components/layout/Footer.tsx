@@ -12,8 +12,11 @@ export default function Footer() {
                     {/* Brand */}
                     <div className={styles.column}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-                            <Anchor size={24} className="text-white" />
-                            <h3 style={{ margin: 0 }}>Gabo Marti</h3>
+                            <img
+                                src="/Images/gabo_marti_logo.png"
+                                alt="Gabo Marti Logo"
+                                style={{ height: '32px', width: 'auto' }}
+                            />
                         </div>
                         <p className={styles.text}>
                             Ihr Partner für Ihr Boot. Boote, Motoren und Unterhalt. Seit über 40 Jahren Qualität in Neuenkirch.
