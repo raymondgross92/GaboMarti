@@ -1,8 +1,11 @@
 .footer {
-    background-color: var(--primary);
-    color: var(--text-white);
+    background-color: var(--surface);
+    /* Light background */
+    color: var(--text-main);
+    /* Dark text */
     padding: 4rem 0 2rem;
     margin-top: auto;
+    border-top: 1px solid var(--border);
 }
 
 .grid {
@@ -13,14 +16,14 @@
 }
 
 .column h3 {
-    color: var(--text-white);
+    color: var(--primary);
+    /* Brand blue for headings */
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
 }
 
 .text {
-    color: #CBD5E1;
-    /* Slate-300 */
+    color: var(--text-light);
     line-height: 1.6;
     margin-bottom: 1rem;
 }
@@ -32,21 +35,21 @@
 }
 
 .footerLink {
-    color: #CBD5E1;
+    color: var(--text-light);
+    /* Darker gray for links */
     transition: color 0.2s;
 }
 
 .footerLink:hover {
-    color: white;
+    color: var(--secondary);
+    /* Brand magenta on hover */
     padding-left: 4px;
-    /* subtle interaction */
 }
 
 .bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--border);
     padding-top: 2rem;
     text-align: center;
-    color: #94A3B8;
-    /* Slate-400 */
+    color: var(--text-light);
     font-size: 0.875rem;
 }
