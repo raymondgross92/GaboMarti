@@ -64,7 +64,7 @@ export default function ProductsPage() {
             {/* Hero Header */}
             <div className={styles.pageHero}>
                 <div className={styles.heroImage}>
-                    <img src="/Images/webseite_3.jpeg" alt="Gabo Marti Motoren & Zubehör" />
+                    <img src="/Images/webseite_2.png" alt="Gabo Marti Motoren & Zubehör" />
                 </div>
                 <div className={styles.heroOverlay}></div>
                 <div className={styles.heroContent}>
