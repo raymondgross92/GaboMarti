@@ -1,30 +1,16 @@
-.section {
-    background-color: var(--background);
-    padding: 0;
-    /* Remove padding as it is handled by the component inside */
-}
-
-/* New Page Hero Styles */
-.pageHero {
+/* Full Page Background Wrapper */
+.pageWrapper {
     position: relative;
-    height: 40vh;
-    /* Adjust height as needed */
-    min-height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    /* Force white text for children */
-    overflow: hidden;
-    margin-top: 0;
-    /* Reset */
+    min-height: 100vh;
     padding-top: 80px;
-    /* Offset for fixed navbar */
+    /* Navbar offset */
+    display: flex;
+    flex-direction: column;
 }
 
-.heroImage {
-    position: absolute;
+.backgroundImage {
+    position: fixed;
+    /* Fixed to cover the viewport */
     top: 0;
     left: 0;
     width: 100%;
@@ -32,33 +18,35 @@
     z-index: 0;
 }
 
-.heroImage img {
+.backgroundImage img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 35%;
-    /* Default position similar to others */
+    object-position: center;
 }
 
-.heroOverlay {
-    position: absolute;
+.overlay {
+    position: fixed;
+    /* Fixed to cover the viewport */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(11, 37, 69, 0.6);
-    /* Brand Navy overlay */
-    z-index: 1;
+    background: rgba(255, 255, 255, 0.85);
+    /* Light overlay for readability */
+    z-index: 0;
+    pointer-events: none;
 }
 
-.heroContent {
+.contentWrapper {
     position: relative;
-    z-index: 2;
-    padding: 0 1rem;
+    z-index: 1;
+    width: 100%;
+    flex: 1;
 }
 
-/* Force white text on SectionHeading when inside hero */
-.heroContent h2,
-.heroContent span {
-    color: white !important;
+/* Hero Heading (Transparent, on top of background) */
+.heroHeader {
+    text-align: center;
+    padding: 4rem 1rem 2rem;
 }
