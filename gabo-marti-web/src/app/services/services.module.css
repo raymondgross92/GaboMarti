@@ -7,8 +7,8 @@
 /* New Page Hero Styles */
 .pageHero {
     position: relative;
-    min-height: 90vh;
-    /* Match Homepage Hero format */
+    height: 40vh;
+    /* Standard Hero format */
     /* Adjust height as needed */
     display: flex;
     align-items: center;
