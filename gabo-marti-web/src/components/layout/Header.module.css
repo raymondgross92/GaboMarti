@@ -9,9 +9,10 @@
 }
 
 .header.scrolled {
-    background-color: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.6);
+    /* More transparent */
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
     padding: 0;
     /* Compact on scroll */
@@ -49,12 +50,12 @@
     gap: 0.5rem;
     /* Tighter gap for pills */
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.5);
-    /* Subtle backing for menu items */
+    background-color: transparent;
+    /* Fully transparent initially */
     padding: 0.5rem;
     border-radius: 9999px;
-    backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: none;
+    border: none;
     transition: all 0.3s ease;
 }
 
