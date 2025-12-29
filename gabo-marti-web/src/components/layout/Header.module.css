@@ -72,8 +72,8 @@
 
 .link {
     font-weight: 500;
-    color: red;
-    /* Changed to red per user request */
+    color: var(--secondary);
+    /* Brand Magenta/Red per user request */
     font-size: 0.95rem;
     padding: 0.6rem 1.2rem;
     border-radius: 9999px;
