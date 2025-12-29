@@ -36,8 +36,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 35%;
-    /* Shift image down slightly per user request */
+    object-position: center 25%;
+    /* Shift image further down (25%) */
 }
 
 .heroOverlay {
