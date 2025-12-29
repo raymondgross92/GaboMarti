@@ -11,7 +11,19 @@ const WaveCanvas = dynamic(() => import('./WaveCanvas'), { ssr: false });
 export default function Hero() {
     return (
         <section id="hero" className={styles.hero}>
-            <WaveCanvas />
+            <div className={styles.videoBackground}>
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className={styles.video}
+                >
+                    <source src="/Images/Video_1.mp4" type="video/mp4" />
+                </video>
+                <div className={styles.overlay}></div>
+            </div>
+            {/* <WaveCanvas /> - Replaced by Video Background */}
             <motion.div
                 className={styles.content}
                 initial={{ opacity: 0, scale: 0.95 }}
