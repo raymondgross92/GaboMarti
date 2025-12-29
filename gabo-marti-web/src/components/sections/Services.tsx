@@ -41,12 +41,12 @@ const SERVICES = [
     }
 ];
 
-export default function Services() {
+export default function Services({ hideHeading = false }: { hideHeading?: boolean }) {
     return (
         <section id="services" className={`section ${styles.section}`}>
             <div className="container">
                 <ScrollAnimation>
-                    <SectionHeading title="Unsere Leistungen" subtitle="Qualität seit über 40 Jahren" />
+                    {!hideHeading && <SectionHeading title="Unsere Leistungen" subtitle="Qualität seit über 40 Jahren" />}
 
                     <div className={styles.grid}>
                         {SERVICES.map((service, index) => (
