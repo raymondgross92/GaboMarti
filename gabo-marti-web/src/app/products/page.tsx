@@ -60,11 +60,28 @@ const PRODUCTS = [
 
 export default function ProductsPage() {
     return (
-        <div style={{ paddingTop: '80px', paddingBottom: '4rem', backgroundColor: 'var(--background)' }}>
+        <div style={{ backgroundColor: 'var(--background)' }}>
+            {/* Hero Header */}
+            <div className={styles.pageHero}>
+                <div className={styles.heroImage}>
+                    <img src="/Images/webseite_2.tif" alt="Gabo Marti Motoren & Zubehör" />
+                </div>
+                <div className={styles.heroOverlay}></div>
+                <div className={styles.heroContent}>
+                    <ScrollAnimation>
+                        <SectionHeading
+                            title="Motoren & Zubehör"
+                            subtitle="Alles für Ihr Boot"
+                            className="text-white"
+                        />
+                    </ScrollAnimation>
+                </div>
+            </div>
+
             <section className={`section ${styles.section}`}>
                 <div className="container">
                     <ScrollAnimation>
-                        <SectionHeading title="Motoren & Zubehör" subtitle="Alles für Ihr Boot" />
+                        {/* Heading moved to hero */}
 
                         <div className={styles.grid}>
                             {PRODUCTS.map((prod, index) => (
