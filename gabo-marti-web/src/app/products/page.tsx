@@ -1,6 +1,6 @@
 'use client';
 
-import { Radar } from 'lucide-react';
+import { Radar, Zap } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
 import ScrollAnimation from '@/components/ui/ScrollAnimation';
 import Button from '@/components/ui/Button';
@@ -39,6 +39,14 @@ const PRODUCTS = [
         color: '#FFFFFF',
         link: 'https://promot.ch/produkte-type/alle-produkte/anhaenger/respo/',
         image: '/Images/anhänger_logo.png' // Respo
+    },
+    {
+        title: 'Elektromotoren',
+        text: 'Leistungsstarke und umweltfreundliche Elektromotoren für Ihr Boot.',
+        color: '#FFFFFF',
+        link: '/contact',
+        icon: Zap,
+        buttonText: 'Anfragen'
     },
     {
         title: 'Echolote & Navigation',
