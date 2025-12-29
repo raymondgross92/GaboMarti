@@ -7,8 +7,7 @@
 /* New Page Hero Styles */
 .pageHero {
     position: relative;
-    min-height: 100vh;
-    /* Increased to full viewport height per user request */
+    min-height: 90vh;
     /* Match Homepage Hero format */
     /* Adjust height as needed */
     display: flex;
