@@ -63,12 +63,9 @@ export default function About() {
                             </div>
 
                         </div>
-                        <div className={styles.imagePlaceholder} style={{ padding: 0, overflow: 'hidden', border: 'none' }}>
-                            <img
-                                src="/Images/gabo_marti_startseite.jpg"
-                                alt="Gabo Marti Werkstatt und Inhaber"
-                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                            />
+                        <div className={styles.imagePlaceholder}>
+                            {/* Placeholder for "Vorstellung der Inhaber/Familie" image */}
+                            <span style={{ color: 'var(--text-light)' }}>Bild: Die Inhaber / Werkstatt</span>
                         </div>
                     </div>
                 </ScrollAnimation>
