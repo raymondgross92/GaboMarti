@@ -90,10 +90,10 @@ export default function Footer() {
 
                 <div className={styles.bottom}>
                     <p>&copy; {currentYear} Gabo Marti GmbH. Alle Rechte vorbehalten.</p>
-                    <div style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem', opacity: 0.8, fontSize: '0.9rem' }}>
-                        <Link href="/privacy" style={{ color: 'white', textDecoration: 'none' }}>Datenschutz</Link>
+                    <div style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem', opacity: 0.8, fontSize: '0.9rem', color: 'var(--text-light)' }}>
+                        <Link href="/privacy" style={{ color: 'inherit', textDecoration: 'none' }} className="hover:text-primary transition-colors">Datenschutz</Link>
                         <span>|</span>
-                        <Link href="/impressum" style={{ color: 'white', textDecoration: 'none' }}>Impressum</Link>
+                        <Link href="/impressum" style={{ color: 'inherit', textDecoration: 'none' }} className="hover:text-primary transition-colors">Impressum</Link>
                     </div>
                 </div>
             </div>
