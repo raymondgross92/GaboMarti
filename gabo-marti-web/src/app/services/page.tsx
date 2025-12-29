@@ -5,26 +5,25 @@ import styles from './services.module.css';
 
 export default function ServicesPage() {
     return (
-        <div className={styles.pageWrapper}>
-            {/* Full Page Background */}
-            <div className={styles.backgroundImage}>
-                <img src="/Images/webseite_1.png" alt="Gabo Marti Dienstleistungen" />
-                <div className={styles.overlay}></div>
-            </div>
-
-            {/* Content Overlay */}
-            <div className={styles.contentWrapper}>
-                <ScrollAnimation>
-                    <div className={styles.heroHeader}>
+        <div style={{ backgroundColor: 'var(--background)' }}>
+            {/* Hero Header */}
+            <div className={styles.pageHero}>
+                <div className={styles.heroImage}>
+                    <img src="/Images/webseite_1.png" alt="Gabo Marti Dienstleistungen" />
+                </div>
+                <div className={styles.heroOverlay}></div>
+                <div className={styles.heroContent}>
+                    <ScrollAnimation>
                         <SectionHeading
                             title="Dienstleistungen"
                             subtitle="Qualität seit über 40 Jahren"
+                            className="text-white"
                         />
-                    </div>
-                </ScrollAnimation>
-
-                <Services hideHeading={true} />
+                    </ScrollAnimation>
+                </div>
             </div>
+
+            <Services hideHeading={true} />
         </div>
     );
 }
