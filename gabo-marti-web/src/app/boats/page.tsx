@@ -36,11 +36,28 @@ const BOATS = [
 
 export default function BoatsPage() {
     return (
-        <div style={{ paddingTop: '80px', paddingBottom: '4rem', backgroundColor: 'var(--background)' }}>
+        <div style={{ backgroundColor: 'var(--background)' }}>
+            {/* Hero Header */}
+            <div className={styles.pageHero}>
+                <div className={styles.heroImage}>
+                    <img src="/Images/webseite_3.jpeg" alt="Gabo Marti Boote" />
+                </div>
+                <div className={styles.heroOverlay}></div>
+                <div className={styles.heroContent}>
+                    <ScrollAnimation>
+                        <SectionHeading
+                            title="Neu & Occasionen"
+                            subtitle="Ihr Traumboot wartet"
+                            className="text-white"
+                        />
+                    </ScrollAnimation>
+                </div>
+            </div>
+
             <section className={`section ${styles.section}`}>
                 <div className="container">
                     <ScrollAnimation>
-                        <SectionHeading title="Neu & Occasionen" subtitle="Ihr Traumboot wartet" />
+                        {/* Heading moved to hero */}
 
                         <div className={styles.grid}>
                             {BOATS.map((boat, index) => (
