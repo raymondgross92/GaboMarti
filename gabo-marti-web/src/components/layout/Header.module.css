@@ -1,9 +1,13 @@
 .header {
-    position: sticky;
+    position: fixed;
+    /* Changed from sticky to fixed to prevent layout thrashing/jitter */
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
     background-color: transparent;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 0.4s ease, padding 0.4s ease, backdrop-filter 0.4s ease, border-bottom 0.4s ease;
+    /* Specific transitions instead of 'all' */
     padding: 1rem 0;
     /* Initial padding for "floating" look */
 }
