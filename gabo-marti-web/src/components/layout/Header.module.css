@@ -72,7 +72,8 @@
 
 .link {
     font-weight: 500;
-    color: var(--text-main);
+    color: red;
+    /* Changed to red per user request */
     font-size: 0.95rem;
     padding: 0.6rem 1.2rem;
     border-radius: 9999px;
