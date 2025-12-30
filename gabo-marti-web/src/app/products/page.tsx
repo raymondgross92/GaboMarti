@@ -1,6 +1,6 @@
 'use client';
 
-import { Radar, Zap } from 'lucide-react';
+
 import SectionHeading from '@/components/ui/SectionHeading';
 import ScrollAnimation from '@/components/ui/ScrollAnimation';
 import Button from '@/components/ui/Button';
@@ -44,17 +44,17 @@ const PRODUCTS = [
         title: 'Elektromotoren',
         text: 'Leistungsstarke und umweltfreundliche Elektromotoren für Ihr Boot.',
         color: '#FFFFFF',
-        link: '/contact',
-        icon: Zap,
-        buttonText: 'Anfragen'
+        link: 'https://epropulsions.ch/',
+        image: '/Images/logo_5.png',
+        buttonText: 'Zum Angebot'
     },
     {
         title: 'Echolote & Navigation',
         text: 'Professionelle Echolote, Fishfinder und Navigationssysteme.',
         color: '#FFFFFF',
-        link: '/contact',
-        icon: Radar,
-        buttonText: 'Anfragen'
+        link: 'https://www.inmova.ch/marine/fischerei/',
+        image: '/Images/logo_9.png',
+        buttonText: 'Zum Angebot'
     }
 ];
 
@@ -85,50 +85,31 @@ export default function ProductsPage() {
 
                         <div className={styles.grid}>
                             {PRODUCTS.map((prod, index) => (
-                                prod.link ? (
-                                    <a
-                                        key={index}
-                                        href={prod.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className={styles.card}
-                                    >
-                                        <div className={styles.cardImage}>
-                                            {prod.image && (
-                                                <img
-                                                    src={prod.image}
-                                                    alt={prod.title}
-                                                />
-                                            )}
-                                        </div>
-                                        <div className={styles.cardContent}>
-                                            <h3 className={styles.cardTitle}>{prod.title}</h3>
-                                            <div className={styles.cardText}>{prod.text}</div>
-                                            <div className={styles.buttonContainer}>
-                                                <Button variant="primary" fullWidth>
-                                                    {(prod as any).buttonText || 'Zum Angebot'}
-                                                </Button>
-                                            </div>
-                                        </div>
-                                    </a>
-                                ) : (
-                                    <div key={index} className={styles.card}>
-                                        <div className={styles.cardImage}>
-                                            {prod.icon && (
-                                                <prod.icon size={64} color="var(--primary)" strokeWidth={1.5} />
-                                            )}
-                                        </div>
-                                        <div className={styles.cardContent}>
-                                            <h3 className={styles.cardTitle}>{prod.title}</h3>
-                                            <p className={styles.cardText}>{prod.text}</p>
-                                            <div className={styles.buttonContainer}>
-                                                <Button variant="outline" fullWidth>
-                                                    Anfragen
-                                                </Button>
-                                            </div>
+                                <a
+                                    key={index}
+                                    href={prod.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.card}
+                                >
+                                    <div className={styles.cardImage}>
+                                        {prod.image && (
+                                            <img
+                                                src={prod.image}
+                                                alt={prod.title}
+                                            />
+                                        )}
+                                    </div>
+                                    <div className={styles.cardContent}>
+                                        <h3 className={styles.cardTitle}>{prod.title}</h3>
+                                        <div className={styles.cardText}>{prod.text}</div>
+                                        <div className={styles.buttonContainer}>
+                                            <Button variant="primary" fullWidth>
+                                                {(prod as any).buttonText || 'Zum Angebot'}
+                                            </Button>
                                         </div>
                                     </div>
-                                )
+                                </a>
                             ))}
                         </div>
                     </ScrollAnimation>
