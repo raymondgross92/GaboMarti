@@ -8,19 +8,7 @@ import styles from './boats.module.css';
 const BOATS = [
     {
         title: 'Neuboote',
-        text: (
-            <>
-                <div style={{ marginBottom: '1rem' }}>
-                    <strong>Buster-Boote</strong><br />
-                    Buster-Boote sind problemlose, haltbare, sichere und leicht zu pflegende Boote.<br />
-                    Sie sind stabil und unsinkbar.
-                </div>
-                <div>
-                    <strong>Thoma</strong><br />
-                    Fischerboote mit Biss. Die Baureihen Thoma 500 550 600 Classic und 600 650 Sportfischer sind für höchste Ansprüche ausgelegt.
-                </div>
-            </>
-        ),
+        text: 'Entdecken Sie die erstklassigen Boote unseres Partners Promot AG. Von robusten Buster-Booten bis zu vielseitigen Modellen von Yamarin und Zodiac – wir bieten Ihnen eine breite Auswahl für jedes Bedürfnis auf dem Wasser.',
         color: '#FFFFFF', // White background (kept for potential fallback, though CSS enforces white)
         link: 'https://promot.ch/produkte-type/alle-produkte/boote/',
         image: '/Images/promot_logo.webp'
