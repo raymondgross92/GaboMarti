@@ -42,7 +42,7 @@ const PRODUCTS = [
     },
     {
         title: 'Elektromotoren',
-        text: 'Leistungsstarke und umweltfreundliche Elektromotoren für Ihr Boot.',
+        text: 'Leistungsstarke Elektromotoren für Ihr Boot.',
         color: '#FFFFFF',
         link: 'https://epropulsions.ch/',
         image: '/Images/logo_5.png',
