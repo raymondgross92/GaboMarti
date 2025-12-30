@@ -8,7 +8,7 @@ import styles from './About.module.css';
 export default function About() {
     const [page, setPage] = useState(0);
     const itemsPerPage = 4;
-    const totalItems = 8;
+    const totalItems = 10;
     const totalPages = Math.ceil(totalItems / itemsPerPage);
 
     const handlePrev = () => {
