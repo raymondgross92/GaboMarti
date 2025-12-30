@@ -7,7 +7,7 @@ const SERVICES = [
     {
         icon: <Wrench size={24} />,
         title: 'Bootservice & Unterhalt',
-        text: 'Fachgerechte Wartung für langanhaltende Freude. Wir kümmern uns um Antifouling, Polieren und GFK-Reparaturen.'
+        text: 'Ihr Boot in besten Händen – ob Wartung, Pflege oder Reparatur. Wir bieten professionellen Service, Antifouling, GFK-Arbeiten und technische Instandsetzungen.'
     },
     {
         icon: <Anchor size={24} />,
