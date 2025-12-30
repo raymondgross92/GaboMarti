@@ -43,7 +43,7 @@ export default function About() {
                                 Willkommen bei Gabo Marti GmbH. Wir sind Ihr kompetenter Partner für Boote, Motoren und Unterhalt in Neuenkirch und Umgebung.
                             </p>
                             <p>
-                                Seit über 40 Jahren sind wir erfolgreich im Markt unterwegs. Wir wissen, wovon wir sprechen, und sind Profis rund um Boote, Bootsmotoren und Zubehör. Als einer der grössten Verwender von Yamaha-Motoren setzen wir auf Qualität und Langlebigkeit.
+                                Seit über 40 Jahren sind wir erfolgreich im Markt unterwegs. Wir wissen, wovon wir sprechen, und sind Profis rund um Boote, Bootsmotoren und Zubehör. Wir setzen auf Qualität und Langlebigkeit und sind stolz auf unsere langjährige Erfahrung mit Yamaha-Motoren.
                             </p>
                             <p>
                                 <strong>Unsere Philosophie:</strong> Wir reparieren mit Qualität!
