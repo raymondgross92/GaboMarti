@@ -1,4 +1,4 @@
-import { Wrench, Anchor, Warehouse, Truck, ClipboardCheck, Radar, Users } from 'lucide-react';
+import { Wrench, Anchor, Warehouse, Truck, ClipboardCheck, Radar, Users, ShoppingBag } from 'lucide-react';
 import SectionHeading from '../ui/SectionHeading';
 import ScrollAnimation from '../ui/ScrollAnimation';
 import styles from './Services.module.css';
@@ -38,6 +38,11 @@ const SERVICES = [
         icon: <Users size={24} />,
         title: 'Persönliche Beratung',
         text: 'Wir nehmen uns Zeit für Sie. Egal ob Neukauf oder Reparatur – wir beraten Sie kompetent, ehrlich und individuell.'
+    },
+    {
+        icon: <ShoppingBag size={24} />,
+        title: 'Angelshop',
+        text: 'Entdecken Sie unser breites Sortiment an Zubehör für Fischer und Bootsfreunde direkt bei uns vor Ort in Neuenkirch.'
     }
 ];
 
