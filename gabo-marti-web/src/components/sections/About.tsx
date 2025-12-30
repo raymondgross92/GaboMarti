@@ -29,6 +29,8 @@ export default function About() {
         { id: 6, img: '/Images/logo_6.png', alt: 'Partner 6' },
         { id: 7, img: '/Images/logo_7.png', alt: 'Partner 7' },
         { id: 8, img: '/Images/logo_8.png', alt: 'Partner 8' },
+        { id: 9, img: '/Images/promot_logo.webp', alt: 'Promot AG' },
+        { id: 10, img: '/Images/logo_9.png', alt: 'Partner 10' },
     ];
     const visibleSponsors = allSponsors.slice(page * itemsPerPage, (page + 1) * itemsPerPage);
 
