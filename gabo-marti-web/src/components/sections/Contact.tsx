@@ -97,9 +97,9 @@ export default function Contact() {
                             <div className={styles.infoBox}>
                                 <h3 className={styles.infoTitle}>Öffnungszeiten</h3>
                                 <p className={styles.text}>
-                                    <strong>Mo - Fr:</strong> 08:00 - 12:00 | 13:30 - 17:30<br />
-                                    <strong>Sa:</strong> Nach Vereinbarung<br />
-                                    <strong>So:</strong> Geschlossen
+                                    <strong>Mo:</strong> 13:30 - 18:00<br />
+                                    <strong>Di - Fr:</strong> 09:00 - 11:30 | 13:30 - 18:00<br />
+                                    <strong>Sa & So:</strong> Geschlossen
                                 </p>
                             </div>
 
