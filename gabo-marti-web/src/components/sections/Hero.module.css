@@ -71,3 +71,23 @@
         font-size: 2.5rem;
     }
 }
+
+.buttonWhiteOutline {
+    background-color: transparent !important;
+    border: 2px solid #FFFFFF !important;
+    color: #FFFFFF !important;
+    transition: all 0.3s ease;
+}
+
+/* Contact Button: Hover -> Primary Color (Restore original look) */
+.buttonContact:hover {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #FFFFFF !important;
+}
+
+/* Offers Button: Hover -> White (Keep existing behavior) */
+.buttonOffers:hover {
+    background-color: #FFFFFF !important;
+    color: var(--primary) !important;
+}
