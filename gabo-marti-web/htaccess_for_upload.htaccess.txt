@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Check if the request is for the subdomain test.ray-tech.ch
+RewriteCond %{HTTP_HOST} ^test\.ray-tech\.ch$ [NC]
+
+# And check if it's not already pointing to the /gabo folder
+RewriteCond %{REQUEST_URI} !^/gabo/
+
+# Rewrite the request to the /gabo folder
+RewriteRule ^(.*)$ /gabo/$1 [L]
