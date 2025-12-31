@@ -86,8 +86,9 @@
     color: #FFFFFF !important;
 }
 
-/* Offers Button: Hover -> White (Keep existing behavior) */
+/* Offers Button: Hover -> Primary Color (Same as Contact) */
 .buttonOffers:hover {
-    background-color: #FFFFFF !important;
-    color: var(--primary) !important;
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #FFFFFF !important;
 }
