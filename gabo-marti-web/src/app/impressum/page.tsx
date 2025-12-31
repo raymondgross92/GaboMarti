@@ -25,7 +25,7 @@ export default function ImpressumPage() {
 
                         <div style={{ marginTop: '2rem' }}>
                             <h3 style={{ marginBottom: '0.5rem' }}>Webdesign</h3>
-                            <p>Diese Homepage wurde von <strong>Ray-Tech</strong> realisiert.</p>
+                            <p>Diese Homepage wurde von <strong>Raymond Gross</strong> realisiert.</p>
                         </div>
 
                         <div style={{ marginTop: '2rem' }}>
