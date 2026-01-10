@@ -20,7 +20,9 @@ export default function ImpressumPage() {
                             6206 Neuenkirch<br />
                             Telefon: 041 467 10 46<br />
                             E-Mail: <a href="mailto:info@gabomarti.ch" style={{ color: 'var(--primary)' }}>info@gabomarti.ch</a><br />
-                            Web: <a href="https://www.gabomarti.ch" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)' }}>www.gabomarti.ch</a>
+                            Web: <a href="https://www.gabomarti.ch" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)' }}>www.gabomarti.ch</a><br />
+                            <br />
+                            <strong>Geschäftsführer:</strong> Markus Marti
                         </p>
 
                         <div style={{ marginTop: '2rem' }}>
