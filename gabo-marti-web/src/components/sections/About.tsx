@@ -39,7 +39,7 @@ export default function About() {
             <div className="container">
                 <ScrollAnimation>
                     <SectionHeading title="Über uns" subtitle="Tradition & Vertrauen" />
-                    <div className={styles.grid}>
+                    <div>
                         <div className={styles.textBlock}>
                             <p>
                                 Willkommen bei Gabo Marti GmbH. Wir sind Ihr kompetenter Partner für Boote, Motoren und Unterhalt in Neuenkirch und Umgebung.
@@ -50,13 +50,6 @@ export default function About() {
                             <p>
                                 <strong>Unsere Philosophie:</strong> Wir reparieren mit Qualität!
                             </p>
-
-
-
-                        </div>
-                        <div className={styles.imagePlaceholder}>
-                            {/* Placeholder for "Vorstellung der Inhaber/Familie" image */}
-                            <span style={{ color: 'var(--text-light)' }}>Bild: Die Inhaber / Werkstatt</span>
                         </div>
                     </div>
                 </ScrollAnimation>
