@@ -22,7 +22,8 @@ export default function ImpressumPage() {
                             E-Mail: <a href="mailto:info@gabomarti.ch" style={{ color: 'var(--primary)' }}>info@gabomarti.ch</a><br />
                             Web: <a href="https://www.gabomarti.ch" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)' }}>www.gabomarti.ch</a><br />
                             <br />
-                            <strong>Geschäftsführer:</strong> Markus Marti
+                            <strong>Geschäftsführer:</strong> Markus Marti<br />
+                            <strong>MwSt-Nummer:</strong> CHE-105.419.909 MWST
                         </p>
 
                         <div style={{ marginTop: '2rem' }}>
