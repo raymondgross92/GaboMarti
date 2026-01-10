@@ -1,12 +1,8 @@
 'use client';
 
-// Dynamic import to avoid SSR issues with 3D canvas
-import dynamic from 'next/dynamic';
 import Button from '../ui/Button';
 import styles from './Hero.module.css';
 import { motion } from 'framer-motion';
-
-const WaveCanvas = dynamic(() => import('./WaveCanvas'), { ssr: false });
 
 export default function Hero() {
     return (
@@ -23,7 +19,7 @@ export default function Hero() {
                 </video>
                 <div className={styles.overlay}></div>
             </div>
-            {/* <WaveCanvas /> - Replaced by Video Background */}
+
             <motion.div
                 className={styles.content}
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -43,6 +39,6 @@ export default function Hero() {
                     </Button>
                 </div>
             </motion.div>
-        </section>
+        </section >
     );
 }

@@ -59,7 +59,7 @@ export default function Contact() {
             } else {
                 alert('Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut.');
             }
-        } catch (error) {
+        } catch {
             alert('Ein Netzwerkfehler ist aufgetreten.');
         }
     };

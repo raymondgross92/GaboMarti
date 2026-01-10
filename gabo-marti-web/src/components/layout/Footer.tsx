@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Anchor, Mail, MapPin, Phone, Facebook, Instagram } from 'lucide-react';
+import { Facebook, Instagram } from 'lucide-react';
 import styles from './Footer.module.css';
 
 export default function Footer() {

@@ -6,7 +6,16 @@ import ScrollAnimation from '@/components/ui/ScrollAnimation';
 import Button from '@/components/ui/Button';
 import styles from './products.module.css';
 
-const PRODUCTS = [
+interface Product {
+    title: string;
+    text: React.ReactNode;
+    color: string;
+    link: string;
+    image: string;
+    buttonText?: string;
+}
+
+const PRODUCTS: Product[] = [
     {
         title: 'Motoren',
         text: (
@@ -105,7 +114,7 @@ export default function ProductsPage() {
                                         <div className={styles.cardText}>{prod.text}</div>
                                         <div className={styles.buttonContainer}>
                                             <Button variant="primary" fullWidth>
-                                                {(prod as any).buttonText || 'Zum Angebot'}
+                                                {prod.buttonText || 'Zum Angebot'}
                                             </Button>
                                         </div>
                                     </div>
